@@ -12,7 +12,7 @@ module.exports = merge(common, {
             loader: 'file-loader',
             options: {
               name: '[name].css',
-              outputPath: 'assets/css/'
+              outputPath: 'css/'
             }
           },
           {
