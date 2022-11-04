@@ -1,3 +1,3 @@
 import _ from 'lodash';
 
-console.log('Hello World');
+console.log('Hell World');

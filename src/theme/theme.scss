@@ -1,0 +1,53 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './icomoon.scss';
+
+@import './color.scss';
+
+/* font-styles */
+
+h1, .h1 {
+    font-size: 200px;
+    font-weight: bold;
+    line-height: 200px;
+    letter-spacing: -5px;
+}
+
+h2, .h2 {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 68px;;
+}
+
+h3, .h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: -4,8px;
+    text-transform: uppercase;
+}
+
+h4, .h4 {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 4px;    
+}
+
+h5, .h5 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+h6, .h6 {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 3px;
+}
+
+body {
+    color: $color-black;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}

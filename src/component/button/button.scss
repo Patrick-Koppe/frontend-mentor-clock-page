@@ -1,0 +1,54 @@
+@import '../../theme/color.scss';
+
+.btn {
+    align-items: center;
+    background: $color-white; 
+    border-radius: 28px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.25);
+    color: $color-black;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    line-height: 28px;
+    padding: 8px 5px 8px 21px;
+    text-transform: uppercase;
+
+
+    span {
+        // workaround icon is space on right side
+        position: relative; 
+        height: 40px; 
+        width: 53px;
+
+        &:before {
+            color: $color-darkgray;
+            //margin-left: 13px; // workaround icon is space on right side
+            font-size: 35px;
+    
+            // workaround icon is space on right side
+            position: absolute; 
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.active {
+        span {
+            transform: rotate(180deg);
+
+            &:before {
+                right: 8px; // workaround icon is space on right side
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        span:before {
+            color: $color-gray;
+        }
+    }
+}

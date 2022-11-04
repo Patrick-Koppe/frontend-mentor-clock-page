@@ -20,12 +20,13 @@ module.exports = merge(common, {
 							}
 						},
 						{
-							loader: 'extract-loader'
+							loader: 'extract-loader',
 						},
             {
               loader: "css-loader",
               options: {
                 sourceMap: true,
+                url: false, // fixed @font-face urls
               }
             },
             {

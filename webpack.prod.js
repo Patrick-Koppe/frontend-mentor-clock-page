@@ -22,6 +22,7 @@ module.exports = merge(common, {
             loader: "css-loader",
             options: {
               sourceMap: false,
+              url: false, // fixed @font-face urls
             }
           },
           {

@@ -1,4 +1,5 @@
+@import '../theme/color.scss';
+
 body {
-    background: black;
-    color: darkgrey;
+    background-color: $color-white;
 }
