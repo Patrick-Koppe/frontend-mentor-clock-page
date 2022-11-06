@@ -1,9 +1,9 @@
-const btns = document.getElementsByClassName('btn');
+const btnsContainer = document.getElementsByClassName('btn-wrapper');
 
-for (let btn of btns) {
-    btn.addEventListener('click', function() {
-      console.log('click event', btn.innerText);
-        btn.classList.toggle('active');
+for (let btnContainer of btnsContainer) {
+  btnContainer.addEventListener('click', function() {
+        let btn = btnContainer.getElementsByClassName('btn')[0];
+        btnContainer.classList.toggle('active')
 
         // Icon auslagern -.-
 
@@ -12,5 +12,5 @@ for (let btn of btns) {
           } else {
             btn.innerText = "MORE";
           }
-    });
+  });
  }
