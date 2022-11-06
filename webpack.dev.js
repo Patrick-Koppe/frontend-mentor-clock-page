@@ -1,45 +1,39 @@
-const { merge } = require('webpack-merge');
-const common = require('./webpack.common.js');
+const path = require('path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = merge(common, {
+module.exports = {
   mode: 'development',
+  devtool: "source-map", // any "source-map"-like devtool is possible
   watch: true,
-  watchOptions: {
-    ignored: /node_modules/,
+  entry: {
+    app: './src/app.js',
   },
   module: {
     rules: [
-        {
-          test: /\.s[ac]ss$/i,
-          use: [
-            {
-							loader: 'file-loader',
-							options: {
-								name: '[name].css',
-								outputPath: 'css/'
-							}
-						},
-						{
-							loader: 'extract-loader',
-						},
-            {
-              loader: "css-loader",
-              options: {
-                sourceMap: true,
-                url: false, // fixed @font-face urls
-              }
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
             },
-            {
-							loader: 'postcss-loader'
-						},
-            {
-              loader: "sass-loader",
-              options: {
-                sourceMap: true,
-              },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
             },
-          ],
-        },
-      ],
+          },
+        ],
+      },
+    ],
   },
-});
+  output: {
+    filename: './js/main.js',
+    path: path.resolve(__dirname, 'dist/assets/'),
+    clean: true,
+  },
+};
