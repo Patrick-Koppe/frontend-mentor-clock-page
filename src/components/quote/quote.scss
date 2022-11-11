@@ -1,0 +1,28 @@
+@import '../../theme/color.scss';
+
+.quote {
+    padding-right: 30px;
+    position: relative;
+
+    .icon-icon-refresh {
+        cursor: pointer;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+
+        &:before {
+            color: #707070;
+        }
+        
+    }
+
+    q {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .author {
+        font-weight: bold;
+        line-height: 22px;
+        margin-top: 8px;
+    }
+}

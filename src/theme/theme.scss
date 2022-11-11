@@ -3,12 +3,13 @@
 @import './icomoon.scss';
 
 @import './color.scss';
+@import './layout.scss';
 
 
 /* font-styles */
 
 h1, .h1 {
-    font-size: 200px;
+    font-size: 200px; 
     font-weight: bold;
     line-height: 200px;
     letter-spacing: -5px;

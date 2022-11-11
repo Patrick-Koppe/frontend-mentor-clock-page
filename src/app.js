@@ -7,3 +7,4 @@ import './theme/theme.scss';
 
 /* Compontente */
 import './components/button/button.js';
+import './components/quote/quote.js'
