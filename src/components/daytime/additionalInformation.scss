@@ -1,0 +1,29 @@
+footer {
+    position: relative;
+
+    .information {
+        padding: 48px 26px;
+    }
+   
+    &:after {
+        background: rgba($color: #fff, $alpha: .75);
+        display: block;
+        content: '';
+        height: 100%;
+        left: 0;
+        filter: blur(40.77px);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    pair {
+        display: flex;
+        justify-content: space-between;
+
+        value {
+            font-weight: bold;
+        }
+    }
+}

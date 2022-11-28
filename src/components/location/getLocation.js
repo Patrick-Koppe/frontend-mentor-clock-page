@@ -11,7 +11,6 @@ for (let locationField of locationFields) {
         })
         .then(response => {
             errorfield.classList.add('hide');
-            console.log(response.city);
             locationField.innerHTML = 'in ' + response.city + ', ' + response.countryCode;
         })
         .catch( err => {
