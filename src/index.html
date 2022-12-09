@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting Started</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <link red="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
   </head>
-  <body>
+  <body class="light">
     <div class="error hide">Sorry you are not connected .... </div>
-    
-    <div class="flex-stretch">
-      <div class="quote m-26 w-50">
-        <i class="icon-icon-refresh"></i>
-        <q>Please wait</q>
-        <p class="author">Loading...</p>
-      </div>
-  
-      <div class="nachunten">
-        <div class="clock p-26">
-          <div class="daytime">
-            <i class="icon-icon-sun"></i>
-            <p>Good morning</p>
-          </div>
-      
-          <div class="time h2">
-            <time class="h1">Loading....</time>
-            <p class="abbreviation">calc...</p>
-          </div>
-      
-          <div class="location">
-              in London, UK
-          </div>
+    <picture class="bg-light">
+      <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-daytime.jpg">
+      <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-daytime.jpg">
+      <img src="./images/mobile/bg-image-daytime.jpg" alt="background lake">
+    </picture>
+    <picture class="bg-dark d-none">
+      <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-nighttime.jpg">
+      <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-nighttime.jpg">
+      <img src="./images/mobile/bg-image-nighttime.jpg" alt="background sky">
+    </picture>
+    <div id="content">
+      <div class="flex-stretch">
+        <div class="quote m-26 w-lg-50">
+          <i class="icon icon-icon-refresh"></i>
+          <q>Please wait</q>
+          <p class="author">Loading...</p>
         </div>
     
-        <div class="btn-wrapper m-26">
-          <button class="btn icon">More</button>
-          <span class="icon-arrow_down"></span>
-        </div> 
+        <div class="nachunten">
+          <div class="clock p-26">
+            <div class="daytime">
+              <i class="icon icon-icon-sun"></i>
+              <p>Good morning</p>
+            </div>
+        
+            <div class="time h2">
+              <time class="h1">Loading....</time>
+              <p class="abbreviation">calc...</p>
+            </div>
+        
+            <div class="location">
+                in London, UK
+            </div>
+          </div>
+      
+          <div class="btn-wrapper m-26">
+            <button class="btn wiht-icon">More</button>
+            <span class="icon-arrow_down"></span>
+          </div> 
+        </div>
       </div>
+      <footer>
+        <div class="information">
+          <pairlist>
+            <pair class="timezone"><key>current timezone</key><value>Europe/London</value></pair>
+            <pair class="doy"><key>day of the year</key><value>295</value></pair>
+            <pair class="dow"><key>day of the week</key><value>5</value></pair>
+            <pair class="week"><key>week number</key><value>42</value></pair>
+          </pairlist>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="information">
-        <pairlist>
-          <pair class="timezone"><key>current timezone</key><value>Europe/London</value></pair>
-          <pair class="doy"><key>day of the year</key><value>295</value></pair>
-          <pair class="dow"><key>day of the week</key><value>5</value></pair>
-          <pair class="week"><key>week number</key><value>42</value></pair>
-        </pairlist>
-      </div>
-    </footer>
+    
+   
  <script src="assets/js/main.js"></script>
 </body>
 </html>

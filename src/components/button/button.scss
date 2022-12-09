@@ -1,5 +1,12 @@
 @import '../../theme/color.scss';
 
+#content {
+    position: fixed;
+    transition: top 0.5s ease-out;
+    width: 100%;
+    top: 0;
+}
+
 .btn-wrapper {
 
     cursor: pointer;

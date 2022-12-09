@@ -2,14 +2,7 @@ body {
     position: fixed;
     margin: 0;
     min-height: 100vh;
-    transition: top 0.5s ease-out;
     width: 100%;
-    top: 0;
-
-    &.active {
-        top: -50vh;
-    }
-
 }
 
 html {
@@ -19,7 +12,7 @@ html {
 .flex-stretch {
     display: flex;
     flex-direction: column;
-    height:100vh;
+    height: 100vh;
     justify-content: space-between;
 }
 
@@ -29,9 +22,13 @@ html {
 .p-26 {
     padding: 26px;
 }
-
-.w-50 {
-    width: 50%;
+.w-100 {
+    width: 100%;
+}
+.w-lg-50 {
+    @media screen and (min-width: 769px) {
+        width: 50%;
+    } 
 }
 
 .nachunten {
@@ -43,4 +40,8 @@ html {
         align-items: flex-start;
         flex-direction: column;
     }
+}
+
+.d-none {
+    display: none !important;
 }

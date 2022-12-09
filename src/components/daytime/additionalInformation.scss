@@ -5,25 +5,50 @@ footer {
         padding: 48px 26px;
     }
    
-    &:after {
-        background: rgba($color: #fff, $alpha: .75);
+    pairlist:after {
         display: block;
         content: '';
         height: 100%;
         left: 0;
-        filter: blur(40.77px);
         position: absolute;
         top: 0;
         width: 100%;
         z-index: -1;
     }
 
-    pair {
+    pairlist {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
 
-        value {
-            font-weight: bold;
+        @media screen and (min-width: 577px) {
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-    }
+
+        pair {
+        
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            @media screen and (min-width: 577px) {
+                flex: 0 0 50%;
+                flex-direction: column;
+            }
+
+            key {
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            value {
+                font-weight: bold;
+                font-size: 20px;
+                @media screen and (min-width: 577px) {
+                    font-size: 40px;
+                }
+            }
+        }
+    } 
 }

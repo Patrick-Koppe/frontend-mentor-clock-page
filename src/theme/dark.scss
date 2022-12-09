@@ -1,0 +1,18 @@
+body.dark {
+
+    color: $color-white;
+
+    .icon {
+        color: $color-white;
+    }
+
+    footer {
+        background: rgba(0,0,0, .75);
+        color: $color-white;
+
+        .information {
+            background: rgba($color: #000, $alpha: .75);
+        }
+        
+    }
+}

@@ -1,0 +1,18 @@
+body.light {
+
+    color: $color-white;
+
+    .icon {
+        color: $color-white;
+    }
+
+    footer {
+        background: rgba(255,255,255, .75);
+        color: $color-black;
+
+        .information {
+            background: rgba($color: #fff, $alpha: .75);
+        }
+        
+    }
+}

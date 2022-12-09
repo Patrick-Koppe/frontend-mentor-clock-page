@@ -1,20 +1,20 @@
 const btnsContainer = document.getElementsByClassName('btn-wrapper');
-const body = document.getElementsByTagName('body')[0];
+const content = document.getElementById('content');
 const footer = document.getElementsByTagName('footer')[0];
 
 for (let btnContainer of btnsContainer) {
   btnContainer.addEventListener('click', function() {
         let btn = btnContainer.getElementsByClassName('btn')[0];
         btnContainer.classList.toggle('active');
-        body.classList.toggle('active');
+        content.classList.toggle('active');
 
         footerHeight = footer.offsetHeight;
 
-        // swipe top the body outside of the screen
-        if(body.classList.contains('active')) {
-          body.style.top = '-' + footerHeight + 'px';
+        // swipe top the content outside of the screen
+        if(content.classList.contains('active')) {
+          content.style.top = '-' + footerHeight + 'px';
         } else {
-          body.style.top = "0";
+          content.style.top = "0";
         }
 
         // Icon auslagern -.- 
