@@ -3,7 +3,6 @@ import './theme/theme.scss';
 /* components */
 import './components/button/button.js';
 import './components/errorfield/errorfield.js';
-//import './components/background/background.js';
 
 /* Modules */
 import { initClock, IntervallClock } from './modules/clock/clock.js';
