@@ -38,3 +38,23 @@ export async function initClock (time, timezone, location) {
     initAdditionalInformation(timeObj, informationField);
     initBackgroundImage(timeObj, backgroundImage)
 }
+
+export async function IntervallClock (time, timezone) {
+    let timeZoneObj;
+
+    // get time zone information (e.g. Europe/Berlin)
+    const timeZoneResponse = await fetch(timezone);
+    timeZoneObj = await timeZoneResponse.json();
+
+    const myTimeZone = timeZoneObj.timezone;
+
+    // get time information for my timezone
+    let timeObj;
+    const myTime = `${time}/timezone/${myTimeZone}`;
+    const timeResponse = await fetch(myTime);
+    timeObj = await timeResponse.json();
+
+    const timeField = document.querySelector('.time');
+
+    initTime(timeObj, timeField);
+}

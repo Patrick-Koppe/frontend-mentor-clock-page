@@ -6,7 +6,7 @@ import './components/errorfield/errorfield.js';
 //import './components/background/background.js';
 
 /* Modules */
-import { initClock } from './modules/clock/clock.js';
+import { initClock, IntervallClock } from './modules/clock/clock.js';
 import { initQuote } from './modules/quote/quote.js';
 
 // Quote
@@ -30,6 +30,6 @@ initClock(timeURL, timeZone, location);
 
 
 setInterval( function() {
-    initClock(timeURL, timeZone, location);
-}, 1000);
+    IntervallClock(timeURL, timeZone, location);
+}, 15000);
   
