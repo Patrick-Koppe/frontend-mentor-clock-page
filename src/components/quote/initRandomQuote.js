@@ -1,11 +1,18 @@
 import {setRandomQuote} from './setRandomQuote';
 
-export async function initRandomQuote(URL) {
+import "./quote.scss";
 
-    let quoteObj;
-    const response = await fetch(URL)
-    quoteObj = await response.json();
+/* get API inforamtion and set loading text */
+export function initRandomQuote(JSON, selector) {
 
-    // set quote api response in html
-    setRandomQuote(quoteObj)
+    // set default values for quote field
+    const textField = selector.getElementsByTagName('q')[0];
+    const authorField = selector.getElementsByClassName('author')[0];
+
+    authorField.innerHTML = 'Please wait ...';
+    textField.innerHTML = 'Loading ....';
+
+
+    // set HTML to quote
+    setRandomQuote(JSON, selector)
 }

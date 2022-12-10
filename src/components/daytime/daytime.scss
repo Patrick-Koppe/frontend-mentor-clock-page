@@ -7,5 +7,13 @@
     p {
         margin: 0;
         text-transform: uppercase;
+
+        span {
+            display: none;
+
+            @media screen and (min-width: 577px) {
+                display: inline-block;
+            }
+        }
     }
 }

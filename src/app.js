@@ -3,10 +3,33 @@ import './theme/theme.scss';
 /* components */
 import './components/button/button.js';
 import './components/errorfield/errorfield.js';
-import './components/background/background.js';
+//import './components/background/background.js';
 
 /* Modules */
-import './modules/quote/quote.js';
-import './modules/clock/clock.js';
+import { initClock } from './modules/clock/clock.js';
+import { initQuote } from './modules/quote/quote.js';
 
+// Quote
+const quoteURL = 'https://api.quotable.io/random';
+const selector = document.querySelector('.quote');
+initQuote(quoteURL, selector);
+
+/* click event */
+const btnRefresh = selector.getElementsByClassName('icon-icon-refresh')[0];
+
+btnRefresh.addEventListener('click', function() {
+    initQuote(quoteURL, selector);
+});
+
+// Different API for time, timezone and location
+const timeURL = 'http://worldtimeapi.org/api';
+const timeZone = 'http://ip-api.com/json/?fields=status,timezone';
+const location = 'http://ip-api.com/json/?fields=status,countryCode,city';
+
+initClock(timeURL, timeZone, location);
+
+
+setInterval( function() {
+    initClock(timeURL, timeZone, location);
+}, 1000);
   

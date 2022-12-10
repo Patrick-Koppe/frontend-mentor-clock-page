@@ -8,16 +8,18 @@
   </head>
   <body class="light">
     <div class="error hide">Sorry you are not connected .... </div>
-    <picture class="bg-light">
-      <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-daytime.jpg">
-      <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-daytime.jpg">
-      <img src="./images/mobile/bg-image-daytime.jpg" alt="background lake">
-    </picture>
-    <picture class="bg-dark d-none">
-      <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-nighttime.jpg">
-      <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-nighttime.jpg">
-      <img src="./images/mobile/bg-image-nighttime.jpg" alt="background sky">
-    </picture>
+    <div class="background-image">
+      <picture class="bg-light">
+        <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-daytime.jpg">
+        <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-daytime.jpg">
+        <img src="./images/mobile/bg-image-daytime.jpg" alt="background lake">
+      </picture>
+      <picture class="bg-dark d-none">
+        <source media="(min-width: 1024px)" srcset="./images/desktop/bg-image-nighttime.jpg">
+        <source media="(min-width: 577px)" srcset="./images/tablet/bg-image-nighttime.jpg">
+        <img src="./images/mobile/bg-image-nighttime.jpg" alt="background sky">
+      </picture>
+    </div>
     <div id="content">
       <div class="flex-stretch">
         <div class="quote m-26 w-lg-50">
@@ -52,10 +54,10 @@
       <footer>
         <div class="information">
           <pairlist>
-            <pair class="timezone"><key>current timezone</key><value>Europe/London</value></pair>
-            <pair class="doy"><key>day of the year</key><value>295</value></pair>
-            <pair class="dow"><key>day of the week</key><value>5</value></pair>
-            <pair class="week"><key>week number</key><value>42</value></pair>
+            <pair class="timezone"><key>current timezone</key><value>loading...</value></pair>
+            <pair class="doy"><key>day of the year</key><value>loading...</value></pair>
+            <pair class="dow"><key>day of the week</key><value>loading...</value></pair>
+            <pair class="week"><key>week number</key><value>loading...</value></pair>
           </pairlist>
         </div>
       </footer>
