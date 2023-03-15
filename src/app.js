@@ -31,4 +31,3 @@ initClock(timeURL, timeZone, location);
 setInterval( function() {
     IntervallClock(timeURL, timeZone, location);
 }, 15000);
-  

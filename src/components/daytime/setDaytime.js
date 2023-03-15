@@ -14,6 +14,6 @@ export function setDaytime(JSON, selector) {
     } else if (getHour > '12' && getHour < '18') {
         dayTimeField.innerHTML = `<i class="icon-icon-sun"></i><p>Good afternoon<span>, it's currently</span></p>`;
     } else {
-        dayTimeField.innerHTML = `<i class="icon-icon-moon"></i><p>Good morning<span>, it's currently</span></p>`;
+        dayTimeField.innerHTML = `<i class="icon-icon-moon"></i><p>Good evening<span>, it's currently</span></p>`;
     }
 }
